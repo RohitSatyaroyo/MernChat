@@ -32,6 +32,10 @@ const userRouter=require('./Routes/userRoutes')
 
 app.use('/api/auth',userRouter)
 
+api.get('/',async(req,res)=>{
+   res.end('hello')
+})
+
 mongoose.set("strictQuery",false)
 mongoose.connect('mongodb+srv://admin:12345@royoapi.3qmdrjq.mongodb.net/?retryWrites=true&w=majority').then(()=>{
     console.log('database connected')
