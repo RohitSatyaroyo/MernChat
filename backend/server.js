@@ -11,7 +11,7 @@ const {Server}=require('socket.io')
 const server=http.createServer(app)
 const io=new Server(server,{
   cors:{
-     origin:["http://localhost:5173"],
+     origin:["https://cha-fro.vercel.app/"],
      methods:["GET","POST"]
   },
 })
@@ -32,7 +32,7 @@ const userRouter=require('./Routes/userRoutes')
 
 app.use('/api/auth',userRouter)
 
-api.get('/',async(req,res)=>{
+app.get('/',async(req,res)=>{
    res.end('hello')
 })
 
