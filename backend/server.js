@@ -39,5 +39,5 @@ app.get('/',async(req,res)=>{
 mongoose.set("strictQuery",false)
 mongoose.connect('mongodb+srv://admin:12345@royoapi.3qmdrjq.mongodb.net/?retryWrites=true&w=majority').then(()=>{
     console.log('database connected')
-  server.listen(8080,'0.0.0.0',()=>console.log('running'))
+  server.listen(8080,()=>console.log('running'))
 })
