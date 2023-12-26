@@ -1,0 +1,32 @@
+body,html{
+    height: 100%;
+}
+
+.box{
+    height: 120vh;
+    width: 100vw;
+    background-color: #131324;
+    display: flex;
+}
+.container{
+    height: 95vh;
+    width: 85vw;
+    background-color: #00000076;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    border-radius: 20px;
+ 
+    
+}
+
+@media  (max-width:1580px){
+    .container{
+        background-color: darkorange;
+        height:90vh;
+        margin-top: 50px;
+    }
+}
+
+
+    
