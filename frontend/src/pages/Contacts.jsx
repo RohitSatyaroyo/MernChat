@@ -3,7 +3,7 @@ import axios from 'axios'
 import './contacts.css'
 import  io from 'socket.io-client'
 export default function Contacts({data,username,userid}) {
-  const socket=io.connect('https://gr-khaki.vercel.app/')
+  const socket=io.connect('https://gr-khaki.vercel.app')
  
   const[msg,setmsg]=useState('')//message input text
    console.log(data)//contacts except own user
