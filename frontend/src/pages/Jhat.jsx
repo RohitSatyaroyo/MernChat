@@ -11,7 +11,7 @@ export default function () {
   const[contacts,setcontacts]=useState([])
   const[currentusername,setcurrentusername]=useState(undefined)
  let [uid,setuid]=useState(undefined)
- const socket=io.connect('https://gr-khaki.vercel.app/')
+
  let userDetails=''
 
 
