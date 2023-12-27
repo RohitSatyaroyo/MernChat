@@ -14,7 +14,7 @@ export default function () {
          }
          else{
             try{
-                const response=await axios.post('http://localhost:8080/api/auth/reg',{name:name,email:email,password:pass})
+                const response=await axios.post('https://gr-khaki.vercel.app/api/auth/reg',{name:name,email:email,password:pass})
                 const{message}=response.data
                 console.log(response.data)
                

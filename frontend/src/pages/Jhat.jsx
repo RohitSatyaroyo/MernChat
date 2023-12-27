@@ -11,7 +11,7 @@ export default function () {
   const[contacts,setcontacts]=useState([])
   const[currentusername,setcurrentusername]=useState(undefined)
  let [uid,setuid]=useState(undefined)
- const socket=io.connect('http://localhost:8080')
+ const socket=io.connect('https://gr-khaki.vercel.app/')
  let userDetails=''
 
 
@@ -32,7 +32,7 @@ export default function () {
       setuid(id)
       setcurrentusername(name)
       try{
-       const res=await axios.get(`http://localhost:8080/api/auth/getAllUser/${id}`)
+       const res=await axios.get(`https://gr-khaki.vercel.app/api/auth/getAllUser/${id}`)
       
     
        setcontacts((res.data))

@@ -3,7 +3,7 @@ import axios from 'axios'
 import './contacts.css'
 import  io from 'socket.io-client'
 export default function Contacts({data,username,userid}) {
-  const socket=io.connect('http://localhost:8080')
+  const socket=io.connect('https://gr-khaki.vercel.app/')
  
   const[msg,setmsg]=useState('')//message input text
    console.log(data)//contacts except own user
@@ -44,7 +44,7 @@ export default function Contacts({data,username,userid}) {
 
 
     
-      const res=await axios.post('http://localhost:8080/api/auth/getmsg',{from:userid,to:e})
+      const res=await axios.post('https://gr-khaki.vercel.app/api/auth/getmsg',{from:userid,to:e})
     
       // setdis(res.data)
       setmessage(res.data)
@@ -63,13 +63,13 @@ export default function Contacts({data,username,userid}) {
 
    }
    async function send(){
-    const res=await axios.post('http://localhost:8080/api/auth/sendmsg',{message:msg,from:userid,to:recid})
+    const res=await axios.post('https://gr-khaki.vercel.app/api/auth/sendmsg',{message:msg,from:userid,to:recid})
     console.log(res.data)
     const {message}=res.data
     
     if(message=='s'){
       setmsg('')
-      const updatedmessage=await axios.post('http://localhost:8080/api/auth/getmsg',{from:userid,to:recid})
+      const updatedmessage=await axios.post('https://gr-khaki.vercel.app/api/auth/getmsg',{from:userid,to:recid})
       
       // setdis(updatedmessage.data)
       setmessage(updatedmessage.data)
