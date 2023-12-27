@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"
+<<<<<<< HEAD
    
+=======
+>>>>>>> fa284526ffa96381bf8fcda9614c104e77349504
   },
   "author": "",
   "license": "ISC",
