@@ -12,6 +12,7 @@ export default function Contacts({data,username,userid}) {
    const [messages,setmessage]=useState([])
    const[recid,setrecid]=useState('')
    const messagecontainerRef=useRef(null)
+  const[f,sf]=useState('')
   
 
    let me;
@@ -24,7 +25,8 @@ export default function Contacts({data,username,userid}) {
          
       async function her(){
        
-        const updatedmessage=await axios.post('https://mern-apiroyo3.onrender.com/api/auth/getmsg',{from:userid,to:recid})
+        const updatedmessage=await axios.post('https://mern-apiroyo3.onrender.com/api/auth/getmsg',{from:userid,to:f})
+       
         setmessage(updatedmessage.data)
       }
       her()
@@ -42,6 +44,7 @@ export default function Contacts({data,username,userid}) {
      m2.style.display='block'
     
      setrecid(e)
+     sf(e)
      console.log('te')
      
 
