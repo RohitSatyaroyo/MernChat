@@ -3,7 +3,7 @@ import axios from 'axios'
 import './contacts.css'
 import  io from 'socket.io-client'
 export default function Contacts({data,username,userid}) {
-  const socket=io('https://mern-apiroyo3.onrender.com')
+  const socket=io('https://mern-apiroyo3.onrender.com/')
  
   const[msg,setmsg]=useState('')//message input text
    console.log(data)//contacts except own user
