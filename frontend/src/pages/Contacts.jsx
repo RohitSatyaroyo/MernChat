@@ -12,7 +12,7 @@ export default function Contacts({data,username,userid}) {
    const [messages,setmessage]=useState([])
    const[recid,setrecid]=useState('')
    const messagecontainerRef=useRef(null)
-  const jf=useRef(1)
+  
    
    let me;
    let he;
@@ -37,7 +37,7 @@ export default function Contacts({data,username,userid}) {
     })
 
      
-  },[socket])///////Main thing in this app enabling real time chat between persons
+  },[socket.on()])///////Main thing in this app enabling real time chat between persons
    async function viewchat(e){
     console.log(e)
      const m1=document.getElementById('m1')
