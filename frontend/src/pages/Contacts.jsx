@@ -24,7 +24,8 @@ export default function Contacts({data,username,userid}) {
           fromSelf:false,
           message:msg
         }
-        setmessage([...messages,data])
+      
+        setmessage(messages=>[...messages,data])
        console.log(messages)
         
        
