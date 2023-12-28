@@ -32,7 +32,7 @@ export default function () {
       setuid(id)
       setcurrentusername(name)
       try{
-       const res=await axios.get(`https://gr-khaki.vercel.app/api/auth/getAllUser/${id}`)
+       const res=await axios.get(`https://mern-apiroyo3.onrender.com/api/auth/getAllUser/${id}`)
       
     
        setcontacts((res.data))
