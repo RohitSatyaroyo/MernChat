@@ -25,6 +25,7 @@ export default function Contacts({data,username,userid}) {
           fromSelf:false,
           message:msg
         }
+      console.log(jf,"jf")
        if(jf.current==1){
           setmessage((prev)=>[...prev,data])
           jf.current=2
