@@ -13,7 +13,7 @@ export default function Contacts({data,username,userid}) {
    const[recid,setrecid]=useState('')
    const messagecontainerRef=useRef(null)
   
-   let jf=1;
+   let jf=useRef(1)
    let me;
    let he;
    useEffect(()=>{
