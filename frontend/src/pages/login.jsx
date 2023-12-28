@@ -8,7 +8,7 @@ export default function login({func}) {
   const navigate=useNavigate()
    const sub=async()=>{
     try{
-      const response=await axios.post('https://gr-khaki.vercel.app/api/auth/login',{email:email,password:pass})
+      const response=await axios.post('https://mern-apiroyo3.onrender.com/api/auth/login',{email:email,password:pass})
       const{message}=response.data
       const {userdetails}=response.data
       const {token}=response.data
