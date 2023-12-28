@@ -18,13 +18,14 @@ export default function Contacts({data,username,userid}) {
    useEffect(()=>{
    
     socket.on(userid,(msg)=>{
-      console.log(messages)
+     
         console.log(msg)
         const data={
           fromSelf:false,
           message:msg
         }
         setmessage([...messages,data])
+       console.log(messages)
         
        
        
