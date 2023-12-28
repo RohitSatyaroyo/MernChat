@@ -18,7 +18,7 @@ export default function Contacts({data,username,userid}) {
    let he;
    useEffect(()=>{
          jf.current=1
-    socket.on(userid,(msg)=>{
+    socket.on(userid,msg=>{
          
         console.log(msg)
         const data={
