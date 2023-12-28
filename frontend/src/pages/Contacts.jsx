@@ -16,35 +16,23 @@ export default function Contacts({data,username,userid}) {
 
    let me;
    let he;
-  useEffect(()=>{
+ useEffect(()=>{
 
 
    
     socket.on(userid,msg=>{
-        console.log(msg)
-        const data={
-          fromSelf:false,
-          message:msg
-        }
-      
-       
-        
-        setmessage((prev)=>[...prev,data])
-
-          return()=>{
-            socket.off(userid)
-          }
          
-   
+      async function her(){
        
-
-       console.log(messages)
-       
+        const updatedmessage=await axios.post('http://localhost:8080/api/auth/getmsg',{from:userid,to:recid})
+        setmessage(updatedmessage.data)
+      }
+      her()
        
     })
 
      
-  },[])
+  },[socket])
  ///////Main thing in this app enabling real time chat between persons
    async function viewchat(e){
     console.log(e)
