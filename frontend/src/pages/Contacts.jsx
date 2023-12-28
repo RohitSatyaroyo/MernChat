@@ -105,12 +105,12 @@ export default function Contacts({data,username,userid}) {
       <div className='message-container'  id='m1' ref={messagecontainerRef}>
      
         {
-          messages.map((m)=>{
+          messages.map((m,index)=>{
              return(
                 <div>
                    <div className={`message${m.fromSelf  ? "sended":"recieved"}`} >
                       <div className={`content${m.fromSelf  ? "sended":"recieved"}`}>
-                        <b style={{paddingLeft:'15px'}}>{m.message}</b>
+                        <b style={{paddingLeft:'15px'}}>{m.message} {index}</b>
                       </div>
                    </div>
                 </div>
