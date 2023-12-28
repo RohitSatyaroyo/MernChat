@@ -38,7 +38,7 @@ export default function Contacts({data,username,userid}) {
      
 
      
-  },[])///////Main thing in this app enabling real time chat between persons
+  }),}[])///////Main thing in this app enabling real time chat between persons
    async function viewchat(e){
     console.log(e)
      const m1=document.getElementById('m1')
