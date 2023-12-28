@@ -12,28 +12,31 @@ export default function Contacts({data,username,userid}) {
    const [messages,setmessage]=useState([])
    const[recid,setrecid]=useState('')
    const messagecontainerRef=useRef(null)
+  const jf=useRef(1)
    
    let me;
    let he;
    useEffect(()=>{
-   
+         jf.current=1
     socket.on(userid,(msg)=>{
-     
+         
         console.log(msg)
         const data={
           fromSelf:false,
           message:msg
         }
-      
-        setmessage(messages=>[...messages,data])
-       console.log(messages)
-        
+       if(jf.current==1){
+          setmessage((prev)=>[...prev,data])
+          jf.current=2
+
+        }
+       
        
        
     })
 
      
-  })///////Main thing in this app enabling real time chat between persons
+  },[socket])///////Main thing in this app enabling real time chat between persons
    async function viewchat(e){
     console.log(e)
      const m1=document.getElementById('m1')
