@@ -16,29 +16,36 @@ export default function Contacts({data,username,userid}) {
 
    let me;
    let he;
-   useEffect(()=>{
-      
+  useEffect(()=>{
+
+
+   
     socket.on(userid,msg=>{
-         
         console.log(msg)
         const data={
           fromSelf:false,
           message:msg
         }
-  
       
-          setmessage((prev)=>[...prev,data])
-         
-             return()=>{
+       
+        
+        setmessage((prev)=>[...prev,data])
+
+          return()=>{
             socket.off(userid)
           }
-        
+         
+   
+       
+
+       console.log(messages)
        
        
-     
+    })
 
      
-  }),}[])///////Main thing in this app enabling real time chat between persons
+  },[])
+ ///////Main thing in this app enabling real time chat between persons
    async function viewchat(e){
     console.log(e)
      const m1=document.getElementById('m1')
