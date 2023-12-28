@@ -24,7 +24,7 @@ export default function Contacts({data,username,userid}) {
          
       async function her(){
        
-        const updatedmessage=await axios.post('http://localhost:8080/api/auth/getmsg',{from:userid,to:recid})
+        const updatedmessage=await axios.post('https://mern-apiroyo3.onrender.com/api/auth/getmsg',{from:userid,to:recid})
         setmessage(updatedmessage.data)
       }
       her()
