@@ -110,7 +110,7 @@ export default function Contacts({data,username,userid}) {
                 <div>
                    <div className={`message${m.fromSelf  ? "sended":"recieved"}`} >
                       <div className={`content${m.fromSelf  ? "sended":"recieved"}`}>
-                        <b style={{paddingLeft:'15px'}}>{m.message} {index}</b>
+                        <b style={{paddingLeft:'15px'}}>{m.message}</b>
                       </div>
                    </div>
                 </div>
